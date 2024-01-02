@@ -1,0 +1,727 @@
+ /* general */
+ * {
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* nav-section */
+#nav-section {
+  margin: 0 10px;
+  border-bottom: 2px solid rgb(219, 209, 209);
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+}
+.logo {
+  width: 50px;
+  height: 50px;
+}
+.logo-p {
+  font-size: 30px;
+  margin: 0 10px;
+  font-weight: 600;
+}
+.logo-text {
+  color: grey;
+  display: block;
+  font-size: 10px;
+  padding-top: 2px;
+}
+.logo-left {
+  display: flex;
+}
+.list-items {
+  list-style: none;
+  display: inline;
+  padding: 0 15px ;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 500;
+}
+nav a:hover {
+  color: orangered;
+  font-weight: 600;
+
+}
+.div-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+}
+
+/* hamburger menu */
+#hamburger-nav {
+  display: none;
+  
+}
+.hamburger-menu {
+  position: relative;
+  display: inline-block;
+}
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  cursor: pointer;
+}
+.hamburger-icon span {
+  width: 100%;
+  background-color: black;
+  height: 2px;
+}
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  width: 200px;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3 ease-in-out;
+  
+}
+.menu-links li {
+  list-style: none;
+  padding: 8px 0;
+  text-align: center;
+  border-bottom: 1px solid rgb(133, 132, 132);
+}
+.menu-links a {
+  color: white;
+}
+.menu-links.open {
+  max-height: 500px;
+  min-width: 300px;
+  background-color: rgb(14, 14, 14);
+}
+/* when opening, they display as cross sign */
+.hamburger-icon.open span:first-child {
+  transform: rotate(45deg) translate(10px, 5px);
+}
+.hamburger-icon.open span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger-icon.open span:last-child {
+  transform: rotate(-45deg) translate(10px, -5px);
+}
+.hamburger-icon span:first-child{
+  transform: none;
+}
+.hamburger-icon span:nth-child(2){
+  opacity: 1;
+}
+.hamburger-icon span:last-child{
+  transform: none;
+}
+
+
+
+
+/* home section */
+#home-div{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 30px 0;
+  border-bottom: 2px solid rgb(228, 220, 220);
+}
+.text-bg {
+  width: 90%;
+  height: 615px;
+  margin-left: 10px;
+  background-image: url("./images/fash.png");
+  background-size: 100% 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: darken;
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 3;
+}
+.text-bg button {
+  padding: 5px;
+  background: none;
+  margin-top: 10px;
+  border: 3px solid orangered;
+  color: white;
+  font-weight: 600;
+}
+.text-bg button:hover {
+  background-color: orangered;
+  color: black;
+}
+.shop-category {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+.women-cat {
+  width: 400px;
+  height: 300px;
+  background-image: url("./images/women.png");
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: darken;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: relative;
+}
+.women-cat .overlay {
+  position: absolute;
+  top: 10%;
+  bottom: 10%;
+  left: 10%;
+  right: 10%;
+  transition: .5s ease;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.94);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.women-cat:hover .overlay {
+  opacity: 1;
+}
+.women-cat .overlay-text {
+  color: orangered;
+  font-style: italic;
+  font-size: 20px;
+  text-align: center;
+  padding: 5px 0;
+  font-weight: bold;
+  
+}
+.overlay-text button {
+  background: none;
+  padding: 8px;
+  color: orangered;
+  border: 1px solid white;
+  margin: 20px 0;
+}
+.overlay-text:hover button{
+  background-color: white;
+  color: black;
+}
+.men-cat {
+  width: 400px;
+  height: 300px;
+  background-image: url("./images/men.png");
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: darken;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.men-cat .overlay {
+  position: absolute;
+  top: 10%;
+  bottom: 10%;
+  left: 10%;
+  right: 10%;
+  transition: .5s ease;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.94);;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.men-cat:hover .overlay {
+  opacity: 1;
+}
+.men-cat .overlay-text {
+  color: orangered;
+  font-style: italic;
+  font-size: 20px;
+  text-align: center;
+  padding: 5px 0;
+  font-weight: bold;
+  
+}
+.kids-cat {
+  width: 400px;
+  height: 300px;
+  background-image: url("./images/kid.png");
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: darken;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.kids-cat .overlay {
+  position: absolute;
+  top: 10%;
+  bottom: 10%;
+  left: 10%;
+  right: 10%;
+  transition: .5s ease;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.94);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.kids-cat:hover .overlay {
+  opacity: 1;
+}
+.kids-cat .overlay-text {
+  color: orangered;
+  font-style: italic;
+  font-size: 20px;
+  text-align: center;
+  padding: 5px 0;
+  font-weight: bold;
+  
+}
+.accessory-cat {
+  width: 400px;
+  height: 300px;
+  background-image: url("./images/accessories.png");
+  background-color: rgba(0, 0, 0, 0.605);
+  background-blend-mode: darken;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.accessory-cat .overlay {
+  position: absolute;
+  top: 10%;
+  bottom: 10%;
+  left: 10%;
+  right: 10%;
+  transition: .5s ease;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.94);;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.accessory-cat:hover .overlay {
+  opacity: 1;
+}
+.accessory-cat .overlay-text {
+  color: orangered;
+  font-style: italic;
+  font-size: 20px;
+  text-align: center;
+  padding: 5px 0;
+  font-weight: bold;
+  
+}
+.cat-text {
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  font-style: italic;
+
+}
+.cat-note {
+  display: block;
+  line-height: 2;
+  color: aliceblue;
+  font-style: italic;
+}
+
+/* men's section*/
+.men-shop {
+  margin: 100px;
+  border-bottom: 2px solid grey ;
+}
+.side-heading {
+  font-size: 30px;
+  text-align: start;
+  padding: 20px 0 0 20px;
+}
+.heading-text {
+  color: rgb(184, 180, 180);
+  font-size: 23px;
+  padding: 20px ;
+}
+
+.men-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  
+}
+.dress {
+  font-size: 22px;
+  display: inline;
+}
+.fa-solid {
+  color: orangered;
+}
+.star {
+  display: flex;
+  justify-content: space-between;
+}
+.rate {
+  display: block;
+  color: grey;
+  line-height: 2;
+}
+.men-1{
+  position: relative;
+}
+.men-1 .buttons-layover {
+  position: absolute;
+  top: 90%;
+  bottom: 0;
+  left: 20%;
+  right: 20%;
+  opacity: 0;
+  transition: transform .3s;
+}
+.men-1:hover .buttons-layover {
+  opacity: 1;
+  transition: 0.4 ;
+  scroll-behavior: smooth;
+  transform: translateY(-40px);
+  
+}
+.overlay-button {
+  font-size: 20px;
+  padding: 10px;
+}
+.buttons-layover button {
+  margin: 0px 15px;
+  cursor: pointer;
+  background-color: whitesmoke;
+  border: none;
+}
+#star {
+  color: black;
+}
+
+/* women section */
+.women-shop {
+  margin: 100px;
+  border-bottom: 2px solid grey;
+  
+
+}
+.women-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.women-2{
+  position: relative;
+}
+.women-2 .buttons-layover {
+  position: absolute;
+  top: 90%;
+  bottom: 0;
+  left: 20%;
+  right: 20%;
+  opacity: 0;
+  transition: transform .3s;
+}
+.women-2:hover .buttons-layover {
+  opacity: 1;
+  transition: 0.4 ;
+  scroll-behavior: smooth;
+  transform: translateY(-40px);
+  
+}
+
+/* kids section */
+.kids-shop {
+  margin: 100px;
+  border-bottom: 2px solid grey;
+
+}
+.kids-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.kids-3{
+  position: relative;
+}
+.kids-3 .buttons-layover {
+  position: absolute;
+  top: 90%;
+  bottom: 0;
+  left: 20%;
+  right: 20%;
+  opacity: 0;
+  transition: transform .3s;
+}
+.kids-3:hover .buttons-layover {
+  opacity: 1;
+  transition: 0.4 ;
+  scroll-behavior: smooth;
+  transform: translateY(-40px);
+  
+}
+
+/* explore section */
+#fashion {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 100px 100px;
+}
+.fashion-blog {
+  width: 80%;
+  
+}
+.explore-text {
+  padding: 0;
+}
+.blog-text {
+  font-size: 20px;
+  line-height: 1.3;
+  color: grey;
+  padding: 50px 0;  
+}
+.quote {
+  color: orangered;
+  font-weight: 600;
+  font-family: Agbalumo, sans-serif;
+  font-size: 20px;
+}
+.button-discover {
+  background: none;
+  padding: 8px;
+  color: orangered;
+  font-weight: 600;
+  border: 2px solid black;
+  border-radius: 2px;
+}
+.button-discover:hover{
+  background-color: orangered;
+  color: black;
+}
+.fashion-pics {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: 50px;
+  gap: 40px;
+
+}
+.pic-box {
+  width: 300px;
+  height: 300px;
+  background-color: rgb(234, 225, 225);
+
+}
+.pic-box img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+.heading-box {
+  font-weight: 600;
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.detail-span {
+  color: grey;
+  font-style: italic;
+}
+.text-center-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* social media section */
+#social-media {
+  margin: 100px;
+}
+.sm-hover-effect {
+  position: relative;
+}
+.over-icon-media {
+  position: absolute;
+  bottom: 5px;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 10px 0 10px;
+  opacity: 0;
+}
+.over-icon-media:hover {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.852);
+  color: orangered;
+}
+
+.img-gallery-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* contact section */
+
+.contact {
+  margin: 100px;
+}
+.h2-contact {
+  font-size: 40px;
+  margin-bottom: 5px;
+}
+.h2-span {
+  display: block;
+  color: grey;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+input {
+  width: 300px;
+  height: 40px; 
+}
+#name {
+  margin-right: 10px;
+}
+::placeholder {
+  padding: 20px;
+  font-style: italic;
+}
+#send-button {
+  height: 40px;
+  padding: 0 10px;
+  background-color: black;
+  margin-left: 10px;
+}
+#send-button:hover {
+  background-color: rgb(49, 45, 45);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.444);
+
+}
+#send-icon {
+  color: orangered;
+  font-size: 20px;
+
+}
+
+/* section newsletter */
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.details-p {
+  font-weight: 600;
+  font-size: 23px;
+  padding: 10px;
+}
+.details-span {
+  display: block;
+  font-size: 20px;
+  color: grey;
+  font-weight: 500;
+  padding: 3px;
+
+}
+
+/* footer */
+footer {
+  background: linear-gradient(black, rgb(6, 5, 4));
+}
+.main-footer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* border-bottom: 1px solid rgb(217, 209, 209); */
+}
+.footer{
+  padding: 100px 0 0 0;
+ 
+}
+.f-logo-color {
+  color: white;
+}
+.footer-text {
+  color: white;
+  padding: 20px 0;
+}
+.bold-p-footer {
+  color: white;
+  font-size: 23px;
+  font-weight: 600;
+
+}
+hr {
+  color: white;
+}
+.social-media-links {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.fa-brands {
+  font-size: 30px;
+  padding: 10px;
+}
+.fa-brands:hover {
+  background-color: orangered;
+  border-radius: 50px;
+  padding: 12px;
+}
+#footer-bottom {
+  color: white;
+  display: block;
+  background-color: black;
+  text-align: center;
+  font-size: 12px;
+  padding: 4px 0;
+}
+.footer a{
+  color: white;
+  text-decoration: none;
+}
+.footer a:hover {
+  color: grey;
+}
+
+.fa-brands:hover{
+  animation-name: anim;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+}
+@keyframes anim {
+  0% {background-color: red;}
+  25% {background-color: yellow;}
+  50% {background-color: blue;}
+  100% {background-color: green;}
+}

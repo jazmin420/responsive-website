@@ -1,0 +1,99 @@
+/* nav section */
+@media screen and (max-width: 1200px) {
+
+
+  /* nav section */
+  .nav-right {
+    display: none;
+  }
+  #hamburger-nav {
+    display: contents;
+  }
+  .div-nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  #nav-section {
+    margin: 0;
+  }
+  
+  /* home */
+  #home-div {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* men section */
+  .men-gallery {
+    flex-wrap: wrap;
+  }
+
+  /* women section */
+  .women-gallery {
+    flex-wrap: wrap;
+  }
+  /* kids section */
+  .kids-gallery {
+    flex-wrap: wrap;
+  }
+  /* explore section */
+  #fashion {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  /* social media section */
+  .img-gallery-social {
+    flex-wrap: wrap;
+  }
+
+  /* contact section */
+  .contact {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+  }
+ /* footer */
+ .f-links {
+  display: none;
+ }
+ .main-footer {
+  flex-wrap: wrap;
+ }
+ /* general */
+ .side-heading {
+  font-size: 20px;
+ }
+ .heading-text {
+  font-size: 13px;
+ }
+ .blog-text {
+  font-size: 13px;
+ }
+  
+}
+@media screen and (max-width: 1200px) {
+  body {
+    margin: 10px;
+  }
+  .side-heading {
+    font-size: 18px;
+   }
+   .heading-text {
+    font-size: 10px;
+   }
+   .blog-text {
+    font-size: 11px;
+   }
+   #fashion {
+    margin: 0px;
+   }
+   #social-media{
+    margin: 10px;
+   }
+   .kids-shop, .women-shop, .men-shop {
+    margin: 0px;
+   }
+   .fashion-pics {
+    margin-left: 0;
+   }
+}
